@@ -1,0 +1,44 @@
+{
+  "name": "role-base-access-control-node-api",
+  "version": "1.0.0",
+  "description": "role base access controle api",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tandavala/role-base-access-control-node-api.git"
+  },
+  "keywords": [
+    "api",
+    "role",
+    "based",
+    "control",
+    "node",
+    "js"
+  ],
+  "author": "jose tandavala",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tandavala/role-base-access-control-node-api/issues"
+  },
+  "homepage": "https://github.com/tandavala/role-base-access-control-node-api#readme",
+  "dependencies": {
+    "accesscontrol": "^2.2.1",
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.11"
+  },
+  "devDependencies": {
+    "eslint": "^7.12.1",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "nodemon": "^2.0.6",
+    "prettier": "^2.1.2"
+  }
+}
