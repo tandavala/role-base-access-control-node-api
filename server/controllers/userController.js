@@ -84,14 +84,14 @@ exports.login = async (req, res, next) => {
   }
 };
 
-exports.getusers = async (req, res, next) => {
+exports.getUsers = async (req, res, next) => {
   const users = await User.find({});
   res.status(200).json({
     data: users,
   });
 };
 
-exports.getuser = async (req, res, next) => {
+exports.getUser = async (req, res, next) => {
   try {
     const { userId } = req.params;
     const user = await User.findById(userId);
