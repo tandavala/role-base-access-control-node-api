@@ -3,7 +3,6 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const jwt = require('jsonwebtoken');
-const path = require('path');
 const User = require('./models/userModel');
 const routes = require('./routes/routes');
 
@@ -12,12 +11,16 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 mongoose
-  .connect('mongodb://localhost:27017/rbac')
+  .connect('mongodb://localhost:27017/rbac', { useUnifiedTopology: true })
   .then(() => {
     console.log('Connected to the Database successfully');
   });
 
-app.use(bodyParser.urlencoded({ extended: true }));
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }));
+
+// parse application/json
+app.use(bodyParser.json());
 
 app.use(async (req, res, next) => {
   if (req.headers['x-access-token']) {
